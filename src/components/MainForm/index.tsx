@@ -52,7 +52,6 @@ export function MainForm() {
         tasks: [...prevState.tasks, newTask],
       };
     });
-    console.log('DEU CERTO');
   }
 
   return (
@@ -64,6 +63,7 @@ export function MainForm() {
           type='text'
           placeholder='Digite algo'
           ref={taskNameInput}
+          disabled={!!state.activeTask}
         />
       </div>
 
